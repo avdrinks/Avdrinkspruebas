@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AV Drinks - Pedidos</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo-av.png" alt="A&V Drinks Logo" class="logo">
+        <h1>AV DRINKS</h1>
+        <p class="tagline">Delivery de bebidas</p>
+    </header>
+
+    <div class="carrito-info">
+        🛒 Seleccionados: <span id="contador-productos">0</span>
+    </div>
+
+    <div class="acordeon-bebidas">
+        
+        <div class="categoria-item">
+            <div class="cabecera-cat" onclick="toggleCategoria('promos')">
+                <span>🔥 PROMOS</span>
+                <span class="flecha" id="flecha-promos">▼</span>
+            </div>
+            <div id="lista-promos" class="contenido-cat" style="display: grid;">
+            </div>
+        </div>
+
+        <div class="categoria-item">
+            <div class="cabecera-cat" onclick="toggleCategoria('unidades')">
+                <span>🍾 UNIDADES</span>
+                <span class="flecha" id="flecha-unidades">▶</span>
+            </div>
+            <div id="lista-unidades" class="contenido-cat" style="display: none;">
+            </div>
+        </div>
+
+        <div class="categoria-item">
+            <div class="cabecera-cat" onclick="toggleCategoria('snacks')">
+                <span>🍟 SNACKS</span>
+                <span class="flecha" id="flecha-snacks">▶</span>
+            </div>
+            <div id="lista-snacks" class="contenido-cat" style="display: none;">
+            </div>
+        </div>
+
+        <div class="categoria-item">
+            <div class="cabecera-cat" onclick="toggleCategoria('cigarros')">
+                <span>🚬 CIGARROS</span>
+                <span class="flecha" id="flecha-cigarros">▶</span>
+            </div>
+            <div id="lista-cigarros" class="contenido-cat" style="display: none;">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tipo-entrega">
+        <h3>¿Cómo lo recibís?</h3>
+
+        <div class="opciones">
+            <button id="btn-retiro" class="opcion-btn" onclick="seleccionarEntrega('retiro')">🏠 Retiro</button>
+            <button id="btn-delivery" class="opcion-btn" onclick="seleccionarEntrega('delivery')">🚚 Delivery</button>
+        </div>
+
+        <div id="campo-direccion" style="display:none;">
+            <button class="btn-ubicacion" onclick="usarUbicacion()">📍 Compartir Ubicación GPS</button>
+            <div class="separador-o">
+                <span>o escribí tu dirección abajo</span>
+            </div>
+            <input type="text" id="direccion" placeholder="Barrio, calle, nro de casa">
+        </div>
+    </div>
+
+    <div class="enlaces-directos">
+        <a href="https://wa.me/542634351883" target="_blank" class="btn-contacto btn-wa-directo">
+            💬 WhatsApp Directo
+        </a>
+        <a href="https://instagram.com/avdrinks" target="_blank" class="btn-contacto btn-ig-directo">
+            📸 Nuestro Instagram
+        </a>
+    </div>
+
+    <button id="btn-whatsapp" onclick="enviarPedido()">
+        🚀 ENVIAR PEDIDO A WHATSAPP
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
