@@ -23,7 +23,7 @@ html, body {
 body {
     font-family: 'Rajdhani', sans-serif;
     color: white;
-    padding-bottom: 200px; /* Aumentado para dar espacio a los nuevos botones + botón fijo */
+    padding-bottom: 120px; /* Volvió a la medida limpia original */
 }
 
 /* FONDO FIJO */
@@ -40,7 +40,7 @@ body::before {
 /* HEADER */
 header {
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 10px 10px 10px;
 }
 
 .logo {
@@ -62,6 +62,60 @@ h1 {
     letter-spacing: 2px;
     color: #00ffcc;
     opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* 📱 NUEVOS BOTONES DE CONTACTO DIRECTO EN EL HEADER (MÁS LLAMATIVOS) */
+.enlaces-directos {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 15px auto 5px auto;
+    width: 92%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.btn-contacto {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 5px;
+    border-radius: 12px;
+    font-family: 'Bebas Neue', sans-serif; /* Cambiado a Bebas Neue para más impacto visual */
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(15, 15, 15, 0.9);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.icono-neon {
+    font-size: 18px;
+    filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* Bordes neón fuertes y brillosos (Glow) */
+.btn-wa-directo {
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), inset 0 0 5px rgba(0, 255, 204, 0.2);
+}
+
+.btn-ig-directo {
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4), inset 0 0 5px rgba(255, 0, 127, 0.2);
+}
+
+/* Efecto al presionarlos */
+.btn-contacto:active {
+    transform: scale(0.95);
+    background-color: #000;
 }
 
 /* 🛒 CARRITO INFO */
@@ -98,7 +152,7 @@ h1 {
 }
 
 .contenido-cat {
-    display: none; /* Por defecto ocultos, se activan con JS */
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 12px;
@@ -125,7 +179,7 @@ h1 {
 .contenedor-imagen {
     width: 100%;
     height: 110px; 
-    background: white; /* Para que resalten las botellas y paquetes */
+    background: white;
     border-radius: 10px;
     padding: 8px;
     margin-bottom: 10px;
@@ -246,53 +300,7 @@ h1 {
     border-radius: 8px;
 }
 
-/* 📱 NUEVOS BOTONES DE CONTACTO DIRECTO (EN PARALELO) */
-.enlaces-directos {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin: 20px auto 10px auto;
-    width: 90%;
-    max-width: 500px;
-    box-sizing: border-box;
-}
-
-.btn-contacto {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 5px;
-    border-radius: 10px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: rgba(20, 20, 20, 0.85);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: center;
-}
-
-/* Bordes neón para hacer juego con tu estética */
-.btn-wa-directo {
-    color: #00ffcc;
-    border: 1px solid #00ffcc;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
-}
-
-.btn-ig-directo {
-    color: #ff007f;
-    border: 1px solid #ff007f;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
-}
-
-.btn-contacto:active {
-    transform: scale(0.96);
-    background-color: #111;
-}
-
-/* 🚀 BOTÓN WHATSAPP FIJO (Ajustado margen inferior para no tapar lo nuevo) */
+/* 🚀 BOTÓN WHATSAPP FIJO */
 #btn-whatsapp {
     position: fixed;
     bottom: 20px;
